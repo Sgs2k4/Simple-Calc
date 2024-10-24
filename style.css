@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    10%{
+        background-position: 0 50%;
+    }
+}
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Josefin Sans',sans-serif;
+    color: black;
+    font-size: 50px;
+    animation: blink 1s linear infinite;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(194, 22, 105, 0.16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff, 5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+}
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgba(0,0,0,.16);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+    }
+    .calculator {
+        grid-template-columns: repeat(4, 55px);
+    }
+    input {
+        width: 220px;
+        height: 60px;
+        font-size: 35px;
+    }
+    button {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+    .equal {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+    .calculator {
+        grid-template-columns: repeat(4, 45px);
+    }
+    input {
+        width: 180px;
+        height: 50px;
+        font-size: 30px;
+    }
+    button {
+        height: 35px;
+        width: 35px;
+        font-size: 12px;
+    }
+    .equal {
+        width: 75px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 25px;
+    }
+    .calculator {
+        grid-template-columns: repeat(4, 40px);
+    }
+    input {
+        width: 160px;
+        height: 45px;
+        font-size: 25px;
+    }
+    button {
+        height: 30px;
+        width: 30px;
+        font-size: 10px;
+    }
+    .equal {
+        width: 70px;
+    }
+}
